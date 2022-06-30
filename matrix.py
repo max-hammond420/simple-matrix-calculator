@@ -48,12 +48,16 @@ class Matrix:
         return class_instance(m)
 
 
+    def make_2d(self):
+        return self.matrix
+
+
     def multiply(self, other):
         m = []
         if self.columns != other.rows:
             print("Can't multiply matrices")
             return None
-        new_m = other.transpose()
+        new_m = other.transpose().make_2d()
         for i in range(self.rows):
             rows = []
             for j in range(other.columns):
