@@ -25,7 +25,6 @@ class Matrix:
         for i in range(len(self.matrix)):
             row = []
             for j in range(len(self.matrix[i])):
-                print(self.matrix[i][j])
                 row.append(self.matrix[i][j] + other.matrix[i][j])
             m.append(row)
         return class_instance(m)
